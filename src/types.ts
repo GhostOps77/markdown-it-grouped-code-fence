@@ -1,7 +1,8 @@
-import Token = require('markdown-it/lib/token');
+import { Token } from 'markdown-it'
 
-export const RULE_NAME = 'GROUPED_CODE_FENCE';
-export const TOKEN_TYPE = `${RULE_NAME}_TYPE`;
+
+export const RULE_NAME = 'GROUPED_CODE_FENCE'
+export const TOKEN_TYPE = `${RULE_NAME}_TYPE`
 
 export enum Nesting {
   open = 1,
@@ -12,13 +13,21 @@ export enum Nesting {
 export type Attrs = [string, string][]; // [ [ name, value ] ]
 
 export type TokenObject = {
-  [K in keyof Token]?: Token[K] extends Function ? never : Token[K]
-} & {
   type: string;
   tag: string;
   nesting: Nesting;
+  map?: [number, number] | null;
   attrs?: Attrs;
-};
+  level?: number;
+  children?: Token[] | null;
+  content?: string;
+  markup?: string;
+  info?: string;
+  meta?: any;
+  block?: boolean;
+  hidden?: boolean;
+}
+
 
 export interface TokenInfo {
   scope: string | null;

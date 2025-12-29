@@ -1,11 +1,11 @@
-import Token = require('markdown-it/lib/token');
+import { Token } from 'markdown-it'
 
-import { Config, Nesting } from './types';
-import { makeLabelTokens, makeToken, tokenMaker } from './utils';
+import { Config, Nesting } from './types'
+import { makeLabelTokens, makeToken, tokenMaker } from './utils'
+
 
 export class List {
   private readonly listChildLevel = this.level + 2;
-
   private readonly listLevel = this.level + 1;
 
   private readonly openToken = makeToken({

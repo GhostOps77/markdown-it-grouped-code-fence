@@ -1,9 +1,10 @@
-import MarkdownIt = require('markdown-it');
-import StateCore = require('markdown-it/lib/rules_core/state_core');
+import MarkdownIt from 'markdown-it'
+import { StateCore } from 'markdown-it'
 
-import { RULE_NAME, Config } from './types';
-import { TokenCollector } from './TokenCollector';
-import { filterTokenInfo } from './utils';
+import { RULE_NAME, Config } from './types'
+import { TokenCollector } from './TokenCollector'
+import { filterTokenInfo } from './utils'
+
 
 function groupedCodeFence(config: Config, state: StateCore) {
   const tokenCollector = new TokenCollector(config);

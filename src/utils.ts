@@ -1,9 +1,11 @@
-import Token = require('markdown-it/lib/token');
+import Token from 'markdown-it/lib/token.mjs'
 
-import { Nesting, TokenObject, TokenInfo, Attrs } from './types';
+import { Nesting, TokenObject, TokenInfo, Attrs } from './types'
+
 
 const GROUP_REGEX = / \[([^\[\]]*)]/; // group can not be language, so there have a space before `group`
 const LANGUAGE_REGEX = /^[^ ]+/;
+
 
 function filterGroupResult(
   info: string,
@@ -13,20 +15,15 @@ function filterGroupResult(
   if (regexResult) {
     const [scope, title] = (regexResult[1] || '').split('-');
     return { scope, title };
-  } else {
-    return {
-      scope: null,
-      title: null,
-    };
   }
+
+  return { scope: null, title: null }
 }
 
 export const filterTokenInfo = (info: string): TokenInfo => {
   const languageResult = LANGUAGE_REGEX.exec(info);
   const language = (languageResult && languageResult[0]) || '';
-
   const { scope, title } = filterGroupResult(info);
-
   return { scope, title: title || language };
 };
 

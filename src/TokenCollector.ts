@@ -1,15 +1,16 @@
-import Token = require('markdown-it/lib/token');
+import { Token } from 'markdown-it'
 
-import { List } from './List';
+import { List } from './List'
 import {
   getInputID,
   getInputName,
   makeNestedToken,
   makeRadioToken,
   tokenMaker,
-} from './utils';
-import { getAndIncreaseID } from './id';
-import { Config, Nesting, TOKEN_TYPE } from './types';
+} from './utils'
+import { getAndIncreaseID } from './id'
+import { Config, Nesting, TOKEN_TYPE } from './types'
+
 
 const makeOpenToken = tokenMaker({
   type: TOKEN_TYPE,
@@ -25,11 +26,8 @@ const makeCloseToken = tokenMaker({
 
 export class TokenCollector {
   private tokens: Token[] = [];
-
   private currentGroupID: number = -1;
-
   private currentGroupIndex: number = -1;
-
   private list: List | null = null;
 
   private get isGroupClosed() {
