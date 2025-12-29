@@ -6,3 +6,4 @@ tsconfig.build.json
 yarn.lock
 *.tgz
 .cache
+.github/
