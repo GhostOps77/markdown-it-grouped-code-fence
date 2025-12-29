@@ -4,3 +4,4 @@ dist/
 .cache
 *.tgz
 .DS_Store
+package-lock.json
