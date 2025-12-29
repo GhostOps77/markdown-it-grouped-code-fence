@@ -11,10 +11,10 @@
     "noImplicitAny": true,
     "strict": true,
     "noImplicitReturns": true,
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "lib": ["dom", "es2015"],
-    "jsx": "react",
     "target": "es5"
   },
-  "include": ["src", "playground"]
+  "include": ["src"]
 }
