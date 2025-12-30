@@ -19,7 +19,7 @@
     "markdown-it",
     "markdown-it-plugin"
   ],
-  "author": "LeetCode front-end team",
+  "author": "GhostOps77",
   "license": "MIT",
   "assetTypesToStringify": [
     "md"
