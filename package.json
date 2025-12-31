@@ -21,9 +21,6 @@
   ],
   "author": "GhostOps77",
   "license": "MIT",
-  "assetTypesToStringify": [
-    "md"
-  ],
   "peerDependencies": {
     "markdown-it": "^14.1.0"
   },
