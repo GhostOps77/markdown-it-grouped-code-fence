@@ -1,4 +1,4 @@
-import { Token } from 'markdown-it';
+import type { Token } from 'markdown-it';
 export declare const RULE_NAME = "GROUPED_CODE_FENCE";
 export declare const TOKEN_TYPE = "GROUPED_CODE_FENCE_TYPE";
 export declare enum Nesting {

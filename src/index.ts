@@ -1,5 +1,5 @@
-import MarkdownIt from 'markdown-it'
-import { StateCore } from 'markdown-it'
+import type MarkdownIt from 'markdown-it'
+import type { StateCore } from 'markdown-it'
 
 import { RULE_NAME, Config } from './types'
 import { TokenCollector } from './TokenCollector'

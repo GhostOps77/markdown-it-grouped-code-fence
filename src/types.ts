@@ -1,4 +1,4 @@
-import { Token } from 'markdown-it'
+import type { Token } from 'markdown-it'
 
 
 export const RULE_NAME = 'GROUPED_CODE_FENCE'

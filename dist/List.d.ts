@@ -1,4 +1,4 @@
-import { Token } from 'markdown-it';
+import type { Token } from 'markdown-it';
 import { Config } from './types';
 export declare class List {
     private readonly className;

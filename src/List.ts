@@ -1,4 +1,4 @@
-import { Token } from 'markdown-it'
+import type { Token } from 'markdown-it'
 
 import { Config, Nesting } from './types'
 import { makeLabelTokens, makeToken, tokenMaker } from './utils'
